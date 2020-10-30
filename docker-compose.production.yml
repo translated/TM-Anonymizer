@@ -19,7 +19,7 @@ services:
         - traefik.enable=true
         - traefik.http.routers.github.service=github
         - traefik.http.routers.github.rule=Host(`cef-datamarketplace-tmanonymizer.translated.com`)
-        - traefik.http.routers.github.entryPoints=anonymization_service.php
+        - traefik.http.routers.github.entryPoints=web
         - traefik.http.services.github.loadBalancer.server.port=8080
         - traefik.http.services.github.loadBalancer.passHostHeader=true
         - traefik.docker.lbswarm=true
