@@ -12,7 +12,7 @@ services:
             - node.labels.zone == dc
       labels:
         - traefik.enable=true
-        - traefik.http.routers.anonymize-cef.service=clean-cef
+        - traefik.http.routers.anonymize-cef.service=anonymize-cef
         - traefik.http.routers.anonymize-cef.entryPoints=web
         - traefik.http.routers.anonymize-cef.rule=Host(`cef-datamarketplace-tmanonymizer.translated.com`)
         - traefik.http.services.anonymize-cef.loadBalancer.server.port=8080
